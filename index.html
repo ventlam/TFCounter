@@ -112,7 +112,7 @@
                 </a>
               </span>
               <span class="link-block">
-                <a href="https://arxiv.org/abs/2011.12948"
+                <a href="https://arxiv.org/abs/XXX"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
@@ -184,7 +184,7 @@
     <!-- Paper video. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Video</h2>
+        <h2 class="title is-3">Car Counting</h2>
         <div class="publication-video">
           <iframe width="560" height="315" src="https://www.youtube.com/embed/hGMqzsCZu1U?si=uvaqwpyD39Rv1DxW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
@@ -194,94 +194,65 @@
   </div>
 </section>
 
-<section class="section">
-  <div class="container is-max-desktop">
-    <!-- Teaser. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column">
-        <div class="content has-text-justified">
-          <div class="center-image">
-            <figure>
-              <img src="./static/teaser.png" class="interpolation-image" alt="Interpolate start reference image." />
-              <figcaption>
-                <strong>Capability demonstration of AppAgent.</strong> AppAgent is an advanced multimodal agent
-                powered by Large Language Models, capable of mastering and utilizing <strong>ANY</strong> Apps to
-                perform complex tasks. It interacts with applications through intuitive tapping and swiping gestures,
-                mimicking human-like actions.
-              </figcaption>
-            </figure>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+
 
 <section class="section">
   <div class="container is-max-desktop">
 
     <div class="columns is-centered">
 
-      <!-- Visual Effects. -->
+      <!--Bike Counting-->
       <div class="column">
         <div class="content">
-          <h2 class="title is-3">Visual Effects</h2>
+          <h2 class="title is-3">Bike Counting</h2>
           <p>
-            Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
-            would be impossible without nerfies since it would require going through a wall.
+            TFCounter, for meituan bike counting
           </p>
-          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/dollyzoom-stacked.mp4"
-                    type="video/mp4">
-          </video>
+          <iframe width="315" height="560" src="https://www.youtube.com/embed/Oms_Ygo279A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
       </div>
-      <!--/ Visual Effects. -->
+      <!--/ Bike Counting. -->
 
-      <!-- Matting. -->
+      <!-- Strawberry Counting. -->
       <div class="column">
-        <h2 class="title is-3">Matting</h2>
+        <h2 class="title is-3">Strawberry Counting</h2>
         <div class="columns is-centered">
           <div class="column content">
-            <p>
-              As a byproduct of our method, we can also solve the matting problem by ignoring
-              samples that fall outside of a bounding box during rendering.
+            <p>TFCounter, for strawberry counting
             </p>
-            <video id="matting-video" controls playsinline height="100%">
-              <source src="./static/videos/matting.mp4"
-                      type="video/mp4">
-            </video>
+            <iframe width="315" height="560" src="https://www.youtube.com/embed/CqbzZtuCWNs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
           </div>
 
         </div>
       </div>
     </div>
-    <!--/ Matting. -->
+    <!--/ Strawberry Counting. -->
 
+    
     <!-- Animation. -->
     <div class="columns is-centered">
       <div class="column is-full-width">
         <h2 class="title is-3">Method</h2>
 
-
-        <!-- Re-rendering. -->
-        <h3 class="title is-4">Re-rendering the input video</h3>
         <div class="content has-text-justified">
           <p>
-            Using <span class="dnerf">Nerfies</span>, you can re-render a video from a novel
-            viewpoint such as a stabilized camera by playing back the training deformations.
+            TFCounter: Polishing Gems for Training-Free Object Counting
           </p>
         </div>
-        <div class="content has-text-centered">
-          <video id="replay-video"
-                 controls
-                 muted
-                 preload
-                 playsinline
-                 width="75%">
-            <source src="./static/videos/replay.mp4"
-                    type="video/mp4">
-          </video>
+        <div class="columns is-centered has-text-centered">
+          <div class="column">
+            <div class="content has-text-justified">
+              <div class="center-image">
+                <figure>
+                  <img src="./static/images/TFCounter.png" class="interpolation-image" alt="Interpolate start reference image." />
+                  <figcaption>
+                    <strong>TFCounter Model</strong>
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
         </div>
         <!--/ Re-rendering. -->
 
@@ -290,32 +261,6 @@
     <!--/ Animation. -->
 
 
-    <!-- Concurrent Work. -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Related Links</h2>
-
-        <div class="content has-text-justified">
-          <p>
-            There's a lot of excellent work that was introduced around the same time as ours.
-          </p>
-          <p>
-            <a href="https://arxiv.org/abs/2104.09125">Progressive Encoding for Neural Optimization</a> introduces an idea similar to our windowed position encoding for coarse-to-fine optimization.
-          </p>
-          <p>
-            <a href="https://www.albertpumarola.com/research/D-NeRF/index.html">D-NeRF</a> and <a href="https://gvv.mpi-inf.mpg.de/projects/nonrigid_nerf/">NR-NeRF</a>
-            both use deformation fields to model non-rigid scenes.
-          </p>
-          <p>
-            Some works model videos with a NeRF by directly modulating the density, such as <a href="https://video-nerf.github.io/">Video-NeRF</a>, <a href="https://www.cs.cornell.edu/~zl548/NSFF/">NSFF</a>, and <a href="https://neural-3d-video.github.io/">DyNeRF</a>
-          </p>
-          <p>
-            There are probably many more by the time you are reading this. Check out <a href="https://dellaert.github.io/NeRF/">Frank Dellart's survey on recent NeRF papers</a>, and <a href="https://github.com/yenchenlin/awesome-NeRF">Yen-Chen Lin's curated list of NeRF papers</a>.
-          </p>
-        </div>
-      </div>
-    </div>
-    <!--/ Concurrent Work. -->
 
   </div>
 </section>
@@ -338,10 +283,10 @@
   <div class="container">
     <div class="content has-text-centered">
       <a class="icon-link"
-         href="./static/videos/nerfies_paper.pdf">
+         href="./static/videos/TFCounter-CR-Arxiv.pdf">
         <i class="fas fa-file-pdf"></i>
       </a>
-      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+      <a class="icon-link" href="https://github.com/tfcounter/TFCounter" class="external-link" disabled>
         <i class="fab fa-github"></i>
       </a>
     </div>
