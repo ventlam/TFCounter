@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="TFCounter: Polishing Gems for Train-Free Object Counting
+        content="TFCounter: Polishing Gems for Training-Free Object Counting
         ">
   <meta name="keywords" content="TFCounter, Object Counting">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -38,6 +38,7 @@
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
+
 </head>
 <body>
 
@@ -103,7 +104,7 @@
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href="https://arxiv.org/pdf/XXXX "
+                <a href="https://arxiv.org/abs/2405.02301"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -159,6 +160,27 @@
 </section>
 
 
+<!-- video -->
+<section>
+  <div class="container is-max-desktop">
+    <div class="columns">
+      <!-- 第一个视频列 -->
+      <div class="column">
+        <iframe width="100%" height="473" src="https://www.youtube.com/embed/hGMqzsCZu1U?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+      <!-- 第二个视频列 -->
+      <div class="column">
+        <iframe width="100%" height="473" src="https://www.youtube.com/embed/Oms_Ygo279A?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+      <!-- 第三个视频列 -->
+      <div class="column">
+        <iframe width="100%" height="473" src="https://www.youtube.com/embed/CqbzZtuCWNs?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 
 <section class="section">
   <div class="container is-max-desktop">
@@ -176,94 +198,106 @@
              <p>
               To demonstrate cross-domain generalizability,  we collect a novel counting dataset named BIKE-1000, including exclusive 1000 images of shared bicycles from Meituan. Extensive experiments on FSC-147, CARPK, and BIKE-1000 datasets demonstrate that TFCounter outperforms existing leading training-free methods and exhibits competitive results compared to trained counterparts. 
           </p>
+
+
+          <!-- TFCounter. -->
+          <figure>
+            <img src="./static/images/TFCounter.png" class="interpolation-image" alt="Interpolate start reference image." />
+            <figcaption>
+              <strong>Overview of our TFCounter.</strong> TFCounter is a segmentation-based model designed for training-free, class-agnostic object counting. It employs an iterative counting mechanism and links three key modules: feature encoding, context-aware similarity computation, and prompt-aware object counting.
+            </figcaption>
+          </figure>
         </div>
       </div>
     </div>
     <!--/ Abstract. -->
+  </div>
+</section>
 
-    <!-- Paper video. -->
+
+<!-- Core Module -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Car Counting</h2>
-        <div class="publication-video">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/hGMqzsCZu1U?si=uvaqwpyD39Rv1DxW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <h2 class="title is-3">Core Module</h2>
+        <div class="content has-text-justified">
+          <p>
+            <strong>The context-aware similarity module</strong> utilizes the image embedding and all foreground masks to generate both foreground and background similarity maps. 
+              <strong>The prompt-aware counting module</strong> performs weighted fusion on these similarity maps and operates a dual prompt system to produce target masks.
+           </p>
+
+          <!-- img. -->
+          <figure>
+            <img src="./static/images/Similarity-and-Counting-Module.png" class="interpolation-image" alt="Interpolate start reference image." />
+          </figure>
+
         </div>
       </div>
     </div>
-    <!--/ Paper video. -->
+    <!--/ Abstract. -->
   </div>
 </section>
 
 
 
+<!-- Qualitative and Quantitative Comparisons -->
 <section class="section">
   <div class="container is-max-desktop">
-
-    <div class="columns is-centered">
-
-      <!--Bike Counting-->
-      <div class="column">
-        <div class="content">
-          <h2 class="title is-3">Bike Counting</h2>
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Qualitative and Quantitative Comparisons</h2>
+        <div class="content has-text-justified">
           <p>
-            TFCounter, for meituan bike counting
+            Qualitative comparison on <strong>FSC147, CARPK, and BIKE-1000</strong>. The "prompt" represents box prompts for SAM-Free and TFCounter.  
           </p>
-          <iframe width="315" height="560" src="https://www.youtube.com/embed/Oms_Ygo279A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        </div>
-      </div>
-      <!--/ Bike Counting. -->
 
-      <!-- Strawberry Counting. -->
-      <div class="column">
-        <h2 class="title is-3">Strawberry Counting</h2>
-        <div class="columns is-centered">
-          <div class="column content">
-            <p>TFCounter, for strawberry counting
-            </p>
-            <iframe width="315" height="560" src="https://www.youtube.com/embed/CqbzZtuCWNs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-          </div>
-
+          <!-- img. -->
+          <figure>
+            <img src="./static/images/Qualitative-Results.png" class="interpolation-image" alt="Interpolate start reference image." />
+          </figure>
+          <figure>
+            <img src="./static/images/Quantitative-comparison.png" class="interpolation-image" alt="Interpolate start reference image." />
+          </figure>
         </div>
       </div>
     </div>
-    <!--/ Strawberry Counting. -->
+    <!--/ Abstract. -->
+  </div>
+</section>
 
-    
-    <!-- Animation. -->
-    <div class="columns is-centered">
+  
+
+
+    <!-- Concurrent Work. -->
+    <!-- <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">Method</h2>
+        <h2 class="title is-3">Related Links</h2>
 
         <div class="content has-text-justified">
           <p>
-            TFCounter: Polishing Gems for Training-Free Object Counting
+            There's a lot of excellent work that was introduced around the same time as ours.
+          </p>
+          <p>
+            <a href="https://arxiv.org/abs/2104.09125">Progressive Encoding for Neural Optimization</a> introduces an idea similar to our windowed position encoding for coarse-to-fine optimization.
+          </p>
+          <p>
+            <a href="https://www.albertpumarola.com/research/D-NeRF/index.html">D-NeRF</a> and <a href="https://gvv.mpi-inf.mpg.de/projects/nonrigid_nerf/">NR-NeRF</a>
+            both use deformation fields to model non-rigid scenes.
+          </p>
+          <p>
+            Some works model videos with a NeRF by directly modulating the density, such as <a href="https://video-nerf.github.io/">Video-NeRF</a>, <a href="https://www.cs.cornell.edu/~zl548/NSFF/">NSFF</a>, and <a href="https://neural-3d-video.github.io/">DyNeRF</a>
+          </p>
+          <p>
+            There are probably many more by the time you are reading this. Check out <a href="https://dellaert.github.io/NeRF/">Frank Dellart's survey on recent NeRF papers</a>, and <a href="https://github.com/yenchenlin/awesome-NeRF">Yen-Chen Lin's curated list of NeRF papers</a>.
           </p>
         </div>
-        <div class="columns is-centered has-text-centered">
-          <div class="column">
-            <div class="content has-text-justified">
-              <div class="center-image">
-                <figure>
-                  <img src="./static/images/TFCounter.png" class="interpolation-image" alt="Interpolate start reference image." />
-                  <figcaption>
-                    <strong>TFCounter Model</strong>
-                  </figcaption>
-                </figure>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!--/ Re-rendering. -->
-
       </div>
-    </div>
-    <!--/ Animation. -->
+    </div> -->
+    <!--/ Concurrent Work. -->
 
-
-
-  </div>
-</section>
 
 
 <section class="section" id="BibTeX">
@@ -297,6 +331,13 @@
             This website is licensed under a <a rel="license"
                                                 href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
             Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            This means you are free to borrow the <a
+              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
+            we just ask that you link back to this page in the footer.
+            Please remember to remove the analytics code included in the header of the website which
+            you do not want on your website.
           </p>
         </div>
       </div>
